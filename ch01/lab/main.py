@@ -1,10 +1,14 @@
 import random
 # Part A
 weeks = 16
-classes = 5
-tuition = 6000
+print(weeks, type(weeks))
+classes = 4 
+print(classes, type(classes))
+tuition = 32000
+print(tuition, type(tuition))
 cost_per_week = ((tuition / classes) / weeks)
-print("Cost per week:", cost_per_week)
+print(type(cost_per_week))
+print("Whats the opportunity cost of my class?:", cost_per_week)
 
 # Part B
 var1= "hi"
