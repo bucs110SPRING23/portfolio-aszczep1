@@ -1,22 +1,23 @@
-import turtle
 
-pen = turtle.Turtle()
-pen2 = turtle.Turtle()
-pen.color("orange")
-pen2.color("purple")
-pen.shape("turtle")
-pen2.shape("turtle")
-pen.speed(1)
-pen2.speed(0)
+## Pygame 
+# framework 
+import pyame
 
-window = turtle.Screen()
+pyame.init()
 
-pen.forward(100)
+screen = pygame.display.set_mode()
 
+# screen: variable 
+# pygame:modules that contain modules are called frameworks 
+# display: submodule of pygame 
+# set mode 
 
+screen.fill("red")
+pygame.display.flip()
+pygame.time.wait(2000)
+screen.fill("green")
+pygame.display.flip()
+pygame.time.wait(2000)
 
-#interface: what can I tell it to do, abstract away the details
-#state 
-
-#always must be the last turtle command
-window.exitonclick()
+# [x, y, width, height (y inreaases downward)](negative coordinantes are always offscreen) 
+dimensions = [ 0, 0, 250, 250]
