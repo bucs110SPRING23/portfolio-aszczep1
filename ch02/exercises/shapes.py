@@ -12,4 +12,6 @@ pygame.draw.circle(screen, "blue", [960, 300], 100)
 pygame.draw.circle(screen, "green", [960, 600], 200)
 
 pygame.display.flip()
+pygame.time.wait(2000)
+
 input()

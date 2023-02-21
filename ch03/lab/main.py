@@ -23,4 +23,5 @@ leonardo.goto(-100,-20)
 # PART B - complete part B here
 
 
+
 window.exitonclick()
