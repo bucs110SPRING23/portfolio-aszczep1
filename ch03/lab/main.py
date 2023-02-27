@@ -1,27 +1,45 @@
-import turtle #1. import modules
+import pygame
 import random
+import math 
 
-#Part A
-window = turtle.Screen() # 2.  Create a screen
-window.bgcolor('lightblue')
+pygame.init()
+screen = pygame.display.set_mode()
+screen_size = screen.get_size()
+print(screen_size)
+#guess = input("Do you think player 1 or 2 will win?:")
 
-michelangelo = turtle.Turtle() # 3.  Create two turtles
-leonardo = turtle.Turtle()
-michelangelo.color('orange')
-leonardo.color('blue')
-michelangelo.shape('turtle')
-leonardo.shape('turtle')
+# Part A
+pos_1 = (screen_size[0] // 2)
+pos_2 = (screen_size[1] // 2)
+screen.fill("green")
+pygame.draw.circle(screen, "red", (pos_1, pos_2), pos_2, 0)
+pygame.draw.line(screen, 'black', (pos_1, 0), (pos_1, screen_size[1]), width = 5 )
+pygame.draw.line(screen, 'black', ( 0 , pos_2), (screen_size[0] , pos_2), width = 5 )
+pygame.display.flip()
+pygame.time.wait(2000)
 
-michelangelo.up() # 4. Pick up the pen so we don’t get lines
-leonardo.up()
-michelangelo.goto(-100,20)
-leonardo.goto(-100,-20)
+# Part B
+x1 = pos_1 
+y1 = pos_2 
+for i in range(11): 
+   x2 = random.randrange(screen_size[0] + 1)
+   y2 = random.randrange(screen_size[1] + 1)
+   distance_from_center = math.hypot(x1 - x2, y1 - y2)
+   is_in_circle = distance_from_center <= pos_2
+   if is_in_circle == True:
+      pygame.draw.circle(screen, "white", [x2, y2], 10)
+   else:
+      pygame.draw.circle(screen, "black", [x2, y2], 10)
 
-## 5. Your PART A code goes here
+pygame.display.flip()
+pygame.time.wait(1000)
 
 
-# PART B - complete part B here
 
 
 
-window.exitonclick()
+
+
+
+
+input()
