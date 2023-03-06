@@ -43,4 +43,12 @@ response = input(message)
 
 for event in pygame.event.get():
     
+# collection objects
 
+# strings - lists characters - immutable 
+# lists - lists of any set of objects - mutable 
+# tuples - immutable lists 
+mytuple = (5, 8, 1, 93944342)
+# dictionaries - used to store key/value pairs 
+mydictitonary = {"a":1, "b":2}
+mydictitonary["c"] = 3
