@@ -24,7 +24,7 @@ font = pygame.font.SysFont("Arial", 24)
 done = False 
 result = [] 
 turns = 0 
-order = list(hotboxes.keys() )
+order = list(hitboxes.keys() )
 random.shuffle(order) 
 
 
