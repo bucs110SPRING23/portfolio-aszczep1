@@ -28,3 +28,25 @@ find_max()
 # two variables of the same name 
 # can't have variables of the same name in the same name 
 
+# local variables get deleted outside of the function 
+# functions must return a value like in math f(x) = y
+# can only return one things 
+def foo():
+    x = 5
+    return x
+    # retun None: NoneType , what python returns if you don't retunr something in a function 
+
+def bar(x = None): 
+    if x is None: 
+        x = 5 * 2
+
+
+# nested functions execute from the inside out 
+
+# case conventions 
+# python uses: 
+# def foo_bar():
+
+# in a 10000 line program 
+# name collisions 
+# global variables never leave memory while the program is running 
