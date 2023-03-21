@@ -57,12 +57,9 @@ def circles(x, y, radius):
 
 def main(): 
     wn = turtle.Screen()
-    print(type(wn))
     wn.bgcolor("black")
     star_pos = star_place(5, wn)
-    print(star_pos)
     for k, v in star_pos.items():
-        print(k, v)
         pos = (k, v)
         star(pos)
     circles(260, 240, 40)
