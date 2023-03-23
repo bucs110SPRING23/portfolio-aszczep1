@@ -1,0 +1,67 @@
+
+# managing complexity- advanced programing just manages complexity 
+# unix - was the first "good" operating system - was about 1000 SLOC (source lines of code) 
+# Chrome - 10000000 SLOC
+# OS X - 100,000,000 SLOC 
+
+# Complex objects 
+# - primitives: int, str, float, lists, dict, tuple 
+# - complex: Turtle: x, y, heading, color(color), pensize(int), shape(str)
+# bundle data and functions together 
+# - state: the current value of the data() in the object 
+# - behavior: the functions that operate on the data in the object 
+
+# Point
+# - object should do one thing 
+# state: x, y, and color 
+# behavior: change_color, move
+# Classes == Type 
+import turtle
+print(type(turtle.Turtle())) # this will be a type of turtle object (complex)
+
+# class are blueprint for objects 
+# - functions are stored algorithms 
+# - class asa a stored data type 
+# - classes are not executable 
+# - don't put executable code in global scope, definitions are fine
+
+# Point class 
+# - instance: an object created from a specific class 
+# - t = turtle.Turtle() # t is an instance of Turtle 
+# - instance variable: an internal variable that is part of an instance 
+#   - t.x, t.pos # x and pos are instance variables 
+# - interface: the functions and variables of an object 
+# - t.forward() is pare of the interface in turtle 
+
+
+# Point - make it a class ourselves 
+### point.py
+# def make_point(x, y):
+class Point:
+    #classes always start with a capital letter 
+    # - usually, classes go in their own file 
+    # 1 class per file 
+    # - dunders = double underscores on both sides of the name 
+    # adding self.var ties the scope of var to the object scope 
+    def __init__(self): # self is the instance being created 
+        self.x = 0  # dot operator accesses instance variables of an object 
+        self.y = 0 
+        self.color = ""
+
+
+
+
+### main.py
+
+import point
+
+p1 = point.Point() # p1 would be the instance of Point, and Point would be the class 
+p1.x = 10 
+
+p2 = point.Point() 
+p2.x = 5
+
+# state of p1(x = 10, y = 0, color = "")
+# state of p2(x = 5, y =0, color = "")
+
+
