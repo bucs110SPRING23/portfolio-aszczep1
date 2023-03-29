@@ -37,31 +37,59 @@ print(type(turtle.Turtle())) # this will be a type of turtle object (complex)
 # Point - make it a class ourselves 
 ### point.py
 # def make_point(x, y):
+
 class Point:
     #classes always start with a capital letter 
     # - usually, classes go in their own file 
     # 1 class per file 
+    # class are named with TitleCase
     # - dunders = double underscores on both sides of the name 
     # adding self.var ties the scope of var to the object scope 
-    def __init__(self): # self is the instance being created 
-        self.x = 0  # dot operator accesses instance variables of an object 
-        self.y = 0 
-        self.color = ""
+    # functions are called 'methods' when they are in a class
+    # first parameter to any method is 'self'
+    def __init__(self, x=0, y=0, color="red"): # self is the instance being created 
+        # self ties the data to the objects in the scope
+        self.x = x  # dot operator accesses instance variables of an object 
+        self.y = y 
+        self.color = color
 
 
 
 
 ### main.py
+# 1. Look in the current folder for the file/module 
+# 2. look in python installed modules 
+# 3. look in the python library 
 
 import point
-
+import sub.module 
+# from sub.module import x 
+# from ..point import Point
+# allows you to go up a directory to grab a class out 
 p1 = point.Point() # p1 would be the instance of Point, and Point would be the class 
-p1.x = 10 
+p1.xcor = 10 
 
-p2 = point.Point() 
-p2.x = 5
+p2 = point.Point(3, 4, "yellow") 
+
+print(p1.xcor, p1.ycor, p1.color, type(p1), )
+p2.xcor = 5
 
 # state of p1(x = 10, y = 0, color = "")
 # state of p2(x = 5, y =0, color = "")
 
+# can add functions 
 
+def random_color(self):
+    
+
+
+#MVC - Model View Controller 
+# for GUI programs 
+# like the accumulator pattern 
+# Design patterns - language independent 
+
+# View - displays things on screen 
+#  - pygame
+#  -turtle
+
+# Controller: controls things on screen 
