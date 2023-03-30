@@ -23,3 +23,4 @@ def main():
     fptr.close()
 
 
+main()
