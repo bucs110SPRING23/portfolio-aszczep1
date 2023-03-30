@@ -16,7 +16,8 @@ def ceasar_cipher(text, shift):
 
 def main():
     text = open("encrypted.txt", "r").read()
-    
+    shift = 6
+    ceasar_cipher(text, shift)
     fptr = open("ecrypted2.txt", "w")
     fptr.write(text)
     fptr.close()
