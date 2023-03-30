@@ -1,5 +1,4 @@
-
-
+import json
 
 
 
@@ -16,5 +15,10 @@ def ceasar_cipher(text, shift):
 
 
 def main():
+    text = open("encrypted.txt", "r").read()
     
+    fptr = open("ecrypted2.txt", "w")
+    fptr.write(text)
+    fptr.close()
+
 
