@@ -7,8 +7,12 @@ print(classes, type(classes))
 tuition = 32000
 print(tuition, type(tuition))
 cost_per_week = ((tuition / classes) / weeks)
-print(type(cost_per_week))
-print("Whats the opportunity cost of my class?:", cost_per_week)
+print("Cost per week:", cost_per_week, type(cost_per_week))
+classes_per_week = 3
+print(classes_per_week, type(classes_per_week))
+cost_per_class = cost_per_week / classes_per_week
+print(cost_per_class, type(cost_per_class))
+
 
 # Part B
 var1= "hi"
