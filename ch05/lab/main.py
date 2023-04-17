@@ -24,34 +24,52 @@ def threenp1range(upper_limit):
 
 # Part B
 
-def graph_coordinates(threenplus1_inters_dict): 
-    screen = pygame.display.set_mode()
-    screen_size = screen.get_size()
+def graph_coordinates(threenplus1_inters_dict):
+    screen_size = (600, 500)
+    screen = pygame.display.set_mode(screen_size)
+    graph_size = (150, 100)
+    graph = pygame.Surface(graph_size)
     screen.fill("blue")
-    new_display = pygame.transform.flip(screen, False, True) 
-    width, height = new_display.get_size()
-    new_display = pygame.transform.scale(new_display, (width * 5, height * 5))
-    screen.blit(new_display, (0,0))
-
-    
+    graph.fill("purple")
     inters_dict = threenplus1_inters_dict.items()
     print(inters_dict)
     max_so_far = 0 
-    cor_1 = (0, 0)
+    #max_value = 0
+    points = [ ]
     for v, k in inters_dict:
-        cor_2 = (v, k)
-        pygame.draw.lines(screen, "red", cor_1, cor_2)
-        cor_1 = (v, k)
+        point = (v, k)
+        points.append(point)
+        if k > max_so_far: 
+            max_so_far = k
+            #max_value = v
 
     
-    font = pygame.font.Font(None, 48)
-    words = [
-        f"The max so far is", {max_so_far}
-         ]
-    msg = font.render(words, False, "red") 
-    pos = (10, 10)
-    screen.blit(msg, pos) 
 
+    print(points)
+  
+    lines = pygame.draw.lines(graph, "red", False, points)
+    new_display = pygame.transform.flip(graph, False, True) 
+    width, height = new_display.get_size()
+    print(width, height)
+    new_display = pygame.transform.scale(new_display, (width * 16, height * 16))
+    
+    screen.blit(new_display, (0,0))
+
+    
+    
+    
+
+    words = [
+        f"The max so far is {max_so_far}"
+    ]
+
+    for m in words:
+        font = pygame.font.Font(None, 48)
+        msg = font.render(m, False, "red") 
+        pos = (10, 10)
+        screen.blit(msg, pos) 
+    pygame.display.flip() 
+    pygame.time.wait(20000)
 
 
 def main(): 

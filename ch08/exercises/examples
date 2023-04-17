@@ -1,0 +1,15 @@
+
+import pygame 
+import point 
+
+## controller - like a nodel, lable for how a class is used 
+
+# model - data 
+# view - display (pygame) 
+
+
+class Controller: 
+
+    def __init__(self): 
+        self.display = pygame.display()
+        
