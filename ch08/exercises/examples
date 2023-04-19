@@ -12,4 +12,11 @@ class Controller:
 
     def __init__(self): 
         self.display = pygame.display()
-        
+
+
+# sprites - anything that moves and interacts on screen 
+# inheritance - if you have a class you can import another one into it 
+
+# sprites must be self.image - instance variable, must be a Surface object 
+
+# if you want to move something across the screen, use getRect and add one constantly 
