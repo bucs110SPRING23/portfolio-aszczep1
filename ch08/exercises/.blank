@@ -1,0 +1,78 @@
+
+
+ #class == type 
+# use 'class' for user defined types 
+# 'complex-type' 
+
+# class data:instance variables
+
+import turtle 
+
+class Num:
+
+    def __init__(self, n) -> None:
+        self.data = n  # instance variables for Num type objects 
+        self.x = "string" 
+
+    
+    # object functions are called methods 
+    # using self as the first parameter, makes it a method 
+    def addone(self): 
+        self.data += 1
+    
+
+    # double under 
+    # no parameters other than self and must return a string 
+    def __str__(self): 
+        obj_str = f"The number is: {self.data}"
+        return obj_str 
+    # no printing 
+    # this must return a string 
+
+    def __add__(self): 
+
+    def __iter__(self): 
+        
+    
+
+
+class Foo: 
+    #def __init__(self, x, y, z, a, b, c) -> None: 
+    #    self.x = x 
+    #    self.y = y
+    #    ect 
+    #instead of doing this 
+    # do this: 
+    def __init__(self, **kwags) -> None: 
+        self.__dict__ = kwags
+        print(kwags)  
+
+def main() -> None: 
+    mynum = Num(7)
+    mynum2 = Num(7) 
+    mynum3 = {'data':7, "x":"string"}
+
+    print(mynum.data)
+    print(mynum2.data) 
+    print(mynum3['data'])
+    print(mynum.__dict__)
+
+    dictionary = {'x':1, 'y':2, 'z':3}
+    foo = Foo
+    t = turtle.Turtle() 
+    t.forwar(56)
+
+
+    mylist = []  #  the same thing as -> list()
+    # mylist.foward() # error 
+    mylist.append() 
+
+    num = 5 
+    print(f"The number is: {5}")
+    mynewnum = Num(5)
+
+
+
+
+
+main()

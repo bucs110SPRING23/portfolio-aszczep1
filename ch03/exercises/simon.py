@@ -1,23 +1,11 @@
-import pygame 
+import pygame
 import random
-## events
-
-## operating system handles events 
-## Your program -> OS: anything happening 
-
-## OS => event 
-## type of event == operation 
-# - click 
-# x 
-
-# connect actions to algorithms 
-
-
 
 pygame.init()
 screen = pygame.display.set_mode()
 colors = ["red", "green", "blue", "yellow"]
 random.shuffle(colors) 
+
 
 for color in colors:
     screen.fill(color)
@@ -42,13 +30,18 @@ response = input(message)
 #pygame.EVENT_OBJECT
 
 for event in pygame.event.get():
-    
-# collection objects
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_UP:
+            screen.fill("red")
+            user_sequence.append("red")
+        elif event.key == pygame.K_DOWN:
+            screen.fill("blue")
+            user_sequence.append("blue")
+        elif event.key == pygame.K_LEFT:
+            screen.fill("green")
+        elif event.key == pygam.K_RIGHT:
+            screen.fill("yellow")
 
-# strings - lists characters - immutable 
-# lists - lists of any set of objects - mutable 
-# tuples - immutable lists 
-mytuple = (5, 8, 1, 93944342)
-# dictionaries - used to store key/value pairs 
-mydictitonary = {"a":1, "b":2}
-mydictitonary["c"] = 3
+
+
+pirnt("user squence: ", user_sequence)

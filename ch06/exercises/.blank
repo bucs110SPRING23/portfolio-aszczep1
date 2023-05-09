@@ -1,0 +1,44 @@
+import json 
+# json is a string format, only difference from python is you have to use double quotes
+
+
+
+
+# files 
+# saved program state 
+
+# operating system: - manage files
+# request the file from OS 
+# - where the file is 
+# - name 
+# - how to use it 
+
+# - working with files is one way 
+
+
+
+def main(): 
+    #file_pointer = open("assets/ideas.txt", "r") # read
+    #ideas = file_pointer.read() # returns as a string
+    #ideas = file_pointer.readlines() # returns as a list 
+    #ideas = file_pointer.readline() # returns the first line 
+    #idea = input("Enter an idea: ")
+    #ideas = [] 
+    #ideas.append(idea)
+    #print(ideas)
+    #file_pointer= open("assets/ideas2.txt", "w") # will delete the file if it already exists 
+    #pen mode file_pointer = open("assets/ideas2.txt, "a")
+    #idea = input("Enter an idea: ") 
+    #ideas = [] 
+    #ideas.append(idea) 
+
+    #for i in ideas: 
+    #    file_pointer.write(i + "\n")  #if we want a line break
+    #file_pointer.close()
+
+    file_contents = open("assets/ides.txt", "r").read() # truncate the file 
+    print(file_contents)
+    data = json.loads(file_contents) 
+    print(data, type(data))
+
+main() 
